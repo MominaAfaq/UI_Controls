@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:scrollbars="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Application Form"
+        android:textSize="30dp"
+        android:textColor="#f00"
+        android:gravity="center_horizontal"
+        android:id="@+id/simpleText"
+        android:textStyle="bold|italic"
+        />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/simpleImg"
+        android:layout_below="@id/simpleText"
+        android:src="@drawable/user"
+        android:padding="5dp"
+
+        android:layout_marginBottom="5dp">
+
+
+    </ImageView>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Name"
+        android:id="@+id/userName"
+        android:layout_below="@id/simpleImg"
+        android:drawableLeft="@drawable/person"
+        android:textSize="25dp"
+        android:textColor="#99aa33"
+        android:layout_marginBottom="5dp">
+
+
+    </EditText>
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Password"
+        android:id="@+id/userPass"
+        android:layout_below="@id/userName"
+        android:drawableLeft="@drawable/lock"
+        android:textSize="25dp"
+        android:textColor="#99aa33"
+        android:inputType="numberPassword">
+
+    </EditText>
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/userPass"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal"
+        android:id="@+id/groupBtn">
+
+
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioBtn1"
+            android:textSize="20dp"
+            android:checked="true"
+            android:text="Male"
+            android:textColor="#99aa33"
+
+            >
+
+        </RadioButton>
+
+
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioBtn2"
+            android:textSize="20dp"
+            android:checked="true"
+            android:text="Female"
+            android:textColor="#99aa33"
+            android:layout_marginLeft="30dp"
+
+            >
+
+        </RadioButton>
+
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Languages :"
+        android:textStyle="bold"
+        android:id="@+id/simpleLang"
+        android:textSize="20dp"
+        android:checked="true"
+        android:layout_below="@id/groupBtn"
+        android:textColor="#99aa33"
+        android:layout_marginTop="5dp">
+
+    </TextView>
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="English"
+        android:id="@+id/checkEng"
+        android:layout_below="@id/simpleLang"
+        android:textSize="20dp"
+        android:textColor="#99aa33"
+        android:layout_marginTop="5dp">
+
+    </CheckBox>
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Urdu"
+        android:id="@+id/checkUrdu"
+        android:layout_below="@id/checkEng"
+        android:textSize="20dp"
+        android:textColor="#99aa33"
+        android:layout_marginTop="5dp">
+
+    </CheckBox>
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Chinese"
+        android:id="@+id/checkChinese"
+        android:layout_below="@id/checkUrdu"
+        android:textSize="20dp"
+        android:textColor="#99aa33"
+        android:layout_marginTop="5dp">
+
+
+    </CheckBox>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/bluetoothWrap"
+        android:layout_below="@id/checkChinese">
+
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/imgButton"
+            android:src="@drawable/bluetooth"
+
+
+
+            >
+
+        </ImageButton>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Bluetooth"
+            android:layout_marginTop="10dp"
+            android:textSize="25dp"
+            android:id="@+id/bluetoothText"
+            android:drawableLeft="@drawable/bluetooth"
+            android:textColor="#99aa33">
+
+        </TextView>
+        <ToggleButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/bluetoothToggle"
+            android:textColor="#99aa33"
+            android:layout_marginLeft="10dp">
+
+
+
+        </ToggleButton>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/motive"
+        android:layout_marginTop="10dp"
+        android:text="Keep Working Hard :)"
+        android:layout_below="@id/bluetoothWrap"
+        android:textSize="20dp"
+        android:textColor="#99aa33"
+        android:textStyle="bold"
+        android:gravity="center">
+
+    </TextView>
+
+
+    <SeekBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/seekbar"
+        android:layout_below="@id/motive"
+        android:layout_marginTop="10dp"
+        android:max="150"
+        android:progress="80">
+
+    </SeekBar>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/submitBtn"
+        android:layout_below="@id/seekbar"
+        android:textSize="25dp"
+        android:text="SUBMIT">
+
+    </Button>
+
+
+
+</RelativeLayout>
